@@ -1,0 +1,39 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<title> 
+	| How to get current formatted date dd/mm/yyyy. 
+	</title> 
+</head> 
+
+<body >
+	<h1> letsupgrade </h1> 
+	<p id="UP"></p> 
+	<button onclick="Run()"> 
+		get Date 
+	</button> 
+	<p id="DOWN"></p>
+	<script> 
+		var up = document.getElementById("UP"); 
+		var down = document.getElementById("DOWN"); 
+		var today = new Date(); 
+		up.innerHTML = today; 
+		var dd = today.getDate(); 
+		var mm = today.getMonth() + 1; 
+        var yyyy = today.getFullYear(); 
+		if (dd < 10) { 
+			dd = '0' + dd; 
+		} 
+		if (mm < 10) { 
+			mm = '0' + mm; 
+		} 
+		var today = dd + '/' + mm + '/' + yyyy; 
+
+		function Run() { 
+			down.innerHTML = today; 
+		} 
+	</script> 
+</body> 
+
+</html> 
